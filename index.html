@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshFold Laundry Mombasa</title>
+  <style>
+    /* --- Global Styles --- */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background-color: #fffafc; color: #333; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* --- Header --- */
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background-color: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+    header .logo { font-size: 28px; font-weight: bold; color: #d63384; }
+    nav a { margin-left: 20px; font-weight: bold; color: #d63384; }
+
+    /* --- Hero Section --- */
+    .hero { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 80px 50px; background-color: #fff0f5; }
+    .hero-text { flex: 1 1 500px; }
+    .hero-text h1 { font-size: 48px; color: #d63384; margin-bottom: 20px; }
+    .hero-text p { font-size: 20px; margin-bottom: 30px; }
+    .btn { background-color: #d63384; color: white; padding: 15px 40px; border-radius: 8px; font-weight: bold; transition: 0.3s; display: inline-block; }
+    .btn:hover { background-color: #c1276e; }
+    .hero-image { flex: 1 1 500px; text-align: center; }
+    .hero-image img { border-radius: 15px; }
+
+    /* --- Services --- */
+    .services { padding: 80px 50px; text-align: center; }
+    .services h2 { font-size: 36px; color: #d63384; margin-bottom: 40px; }
+    .service-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+    .service-card { background-color: #fff; padding: 30px; border-radius: 15px; width: 250px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
+    .service-card img { width: 80px; margin-bottom: 20px; }
+    .service-card h3 { color: #d63384; margin-bottom: 10px; }
+
+    /* --- Pricing --- */
+    .pricing { padding: 80px 50px; background-color: #ffe6f0; text-align: center; }
+    .pricing h2 { font-size: 36px; color: #d63384; margin-bottom: 40px; }
+    .pricing-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+    .pricing-card { background-color: #fff; padding: 30px; border-radius: 15px; width: 250px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s; }
+    .pricing-card h3 { color: #d63384; margin-bottom: 15px; }
+    .pricing-card p { font-size: 18px; font-weight: bold; margin-bottom: 10px; }
+
+    /* --- Testimonials --- */
+    .testimonials { padding: 80px 50px; text-align: center; }
+    .testimonials h2 { font-size: 36px; color: #d63384; margin-bottom: 40px; }
+    .testimonial-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+    .testimonial-card { background-color: #fff; padding: 30px; border-radius: 15px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-style: italic; }
+
+    /* --- Contact --- */
+    .contact { padding: 80px 50px; background-color: #fff0f5; text-align: center; }
+    .contact h2 { font-size: 36px; color: #d63384; margin-bottom: 40px; }
+    .contact form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+    .contact input, .contact textarea { padding: 15px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px; width: 100%; }
+    .contact button { background-color: #d63384; color: white; padding: 15px; border-radius: 8px; font-weight: bold; border: none; cursor: pointer; }
+    .contact button:hover { background-color: #c1276e; }
+
+    /* --- Footer --- */
+    footer { padding: 40px 50px; background-color: #fff; text-align: center; color: #d63384; font-weight: bold; }
+
+    /* --- Responsive --- */
+    @media (max-width: 900px) {
+      .hero { flex-direction: column; }
+      .service-cards, .pricing-cards, .testimonial-cards { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">FreshFold Laundry</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Fresh, Clean & Delivered</h1>
+      <p>We make your laundry fresh and sparkling with care. Pickup & Delivery available in Mombasa!</p>
+      <a href="https://wa.me/254788130522" class="btn">Book Now on WhatsApp</a>
+    </div>
+    <div class="hero-image">
+      <img src="images/laundry-hero.jpg" alt="Clean Laundry">
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="service-card">
+        <img src="images/wash-fold.png" alt="Wash & Fold">
+        <h3>Wash & Fold</h3>
+        <p>Quick and careful washing & folding of all your clothes.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/dry-clean.png" alt="Dry Cleaning">
+        <h3>Dry Cleaning</h3>
+        <p>Professional dry cleaning for delicate garments.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/ironing.png" alt="Ironing">
+        <h3>Ironing</h3>
+        <p>Crisp and neat ironing to keep your clothes flawless.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/delivery.png" alt="Pickup & Delivery">
+        <h3>Pickup & Delivery</h3>
+        <p>Convenient pickup and delivery service for your home or office.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing" id="pricing">
+    <h2>Pricing</h2>
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <h3>Wash & Fold</h3>
+        <p>KES 300 / kg</p>
+      </div>
+      <div class="pricing-card">
+        <h3>Dry Cleaning</h3>
+        <p>KES 500 / item</p>
+      </div>
+      <div class="pricing-card">
+        <h3>Ironing</h3>
+        <p>KES 150 / item</p>
+      </div>
+      <div class="pricing-card">
+        <h3>Pickup & Delivery</h3>
+        <p>KES 200 per trip</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        "Amazing service! My clothes have never been cleaner."
+      </div>
+      <div class="testimonial-card">
+        "Fast, reliable, and affordable. Highly recommend!"
+      </div>
+      <div class="testimonial-card">
+        "The pickup and delivery is so convenient. Great job!"
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="tel" placeholder="Your Phone" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 FreshFold Laundry | Follow us on social media
+  </footer>
+
+</body>
+</html>
