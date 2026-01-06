@@ -9,6 +9,7 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
     body { background-color: #fffafc; color: #333; line-height: 1.6; }
+
     a { text-decoration: none; color: inherit; }
 
     header {
@@ -20,20 +21,23 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
+      z-index: 1000;
     }
 
     .logo { font-size: 28px; font-weight: bold; color: #d63384; }
     nav a { margin-left: 20px; font-weight: bold; color: #d63384; }
 
+    /* Hero Section */
     .hero {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      padding: 80px 50px;
-      background-color: #fff0f5;
+      justify-content: space-between;
+      padding: 100px 50px;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
     }
 
-    .hero-text { max-width: 600px; }
+    .hero-text { max-width: 550px; }
     .hero-text h1 { font-size: 48px; color: #d63384; margin-bottom: 20px; }
     .hero-text p { font-size: 20px; margin-bottom: 30px; }
 
@@ -44,9 +48,19 @@
       border-radius: 8px;
       font-weight: bold;
       display: inline-block;
+      transition: 0.3s;
     }
 
-    .services, .pricing, .contact {
+    .btn:hover { background-color: #c1276e; }
+
+    .hero-image img {
+      max-width: 450px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    /* Sections */
+    .services, .pricing, .contact, .testimonials {
       padding: 80px 50px;
       text-align: center;
     }
@@ -66,7 +80,10 @@
       border-radius: 15px;
       width: 250px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
     }
+
+    .card:hover { transform: translateY(-5px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
 
     .card h3 { color: #d63384; margin-bottom: 10px; }
 
@@ -78,8 +95,27 @@
       font-weight: bold;
     }
 
+    /* Floating WhatsApp Button */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn:hover { background: #1ebe57; }
+
     @media (max-width: 900px) {
       .hero { flex-direction: column; text-align: center; }
+      .hero-image img { margin-top: 30px; }
+      .cards { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
@@ -95,32 +131,38 @@
   </nav>
 </header>
 
+<!-- Hero Section -->
 <section class="hero">
   <div class="hero-text">
     <h1>FreshFold Laundry – Mombasa</h1>
-    <p>Professional, affordable and reliable laundry services you can trust.</p>
-    <a class="btn" href="#contact">Book Now</a>
+    <p>Premium laundry services with pickup & delivery. Clean, fresh and perfectly folded every time.</p>
+    <a class="btn" href="https://wa.me/254788130522" target="_blank">Book on WhatsApp</a>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" alt="Laundry Service">
   </div>
 </section>
 
+<!-- Services -->
 <section id="services" class="services">
   <h2>Our Services</h2>
   <div class="cards">
     <div class="card">
-      <h3>Wash & Fold</h3>
-      <p>Clean, fresh and neatly folded clothes.</p>
+      <h3>🧺 Wash & Fold</h3>
+      <p>Fresh, clean and neatly folded clothes.</p>
     </div>
     <div class="card">
-      <h3>Ironing</h3>
-      <p>Sharp and professional pressing.</p>
+      <h3>👔 Ironing</h3>
+      <p>Crisp and professional pressing.</p>
     </div>
     <div class="card">
-      <h3>Dry Cleaning</h3>
+      <h3>🧼 Dry Cleaning</h3>
       <p>Special care for delicate garments.</p>
     </div>
   </div>
 </section>
 
+<!-- Pricing -->
 <section id="pricing" class="pricing">
   <h2>Pricing</h2>
   <div class="cards">
@@ -135,6 +177,22 @@
   </div>
 </section>
 
+<!-- Testimonials -->
+<section class="testimonials">
+  <h2>What Our Customers Say</h2>
+  <div class="cards">
+    <div class="card">
+      ⭐⭐⭐⭐⭐
+      <p>“Best laundry service in Mombasa. Very clean and fast!”</p>
+    </div>
+    <div class="card">
+      ⭐⭐⭐⭐⭐
+      <p>“Affordable and reliable. Highly recommended.”</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
 <section id="contact" class="contact">
   <h2>Contact Us</h2>
   <p>📍 Mombasa</p>
@@ -144,6 +202,9 @@
 <footer>
   © 2026 FreshFold Laundry – Mombasa
 </footer>
+
+<!-- Floating WhatsApp Button -->
+<a class="whatsapp-btn" href="https://wa.me/254788130522" target="_blank">💬 Chat on WhatsApp</a>
 
 </body>
 </html>
